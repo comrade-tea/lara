@@ -11,15 +11,21 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/', 'PagesController@home');
 
-Route::get('users', 'UsersController@index');
-Route::get('about', 'UsersController@about');
-Route::post('users', 'UsersController@store');
+//Route::get('users', 'UsersController@index');
+//Route::get('about', 'UsersController@about');
+//Route::post('users', 'UsersController@store');
 
 //---------------
 
-Route::get('projects', 'ProjectsController@index');
+//Route::get('projects', 'ProjectsController@index');
+//Route::get('projects/create', 'ProjectsController@create');
+//Route::post('projects', 'ProjectsController@store');
+
+Route::resource('projects', 'ProjectsController');
