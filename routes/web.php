@@ -14,10 +14,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout');
 });
-Route::get('/', 'PagesController@home');
 
+Route::get("projects/{project}", 'UsersController@show');
 //Route::get('users', 'UsersController@index');
 //Route::get('about', 'UsersController@about');
 //Route::post('users', 'UsersController@store');
@@ -26,6 +26,7 @@ Route::get('/', 'PagesController@home');
 
 //Route::get('projects', 'ProjectsController@index');
 //Route::get('projects/create', 'ProjectsController@create');
+//Route::post('projects', 'ProjectsController@store');
 //Route::post('projects', 'ProjectsController@store');
 
 Route::resource('projects', 'ProjectsController');
