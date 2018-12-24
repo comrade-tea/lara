@@ -8,7 +8,6 @@
 		<form class="form-group" method="POST" action="/projects/{{$project->id}}">
 			{{ csrf_field() }}
 			{{ method_field("PATCH") }}
-			{{--{{ $project }}--}}
 
 			<p><input class="form-control" type="text" name="title" value="{{$project->title}}"></p>
 			<p><textarea class="form-control" type="text" name="description">{{ $project->description }}</textarea></p>
@@ -17,13 +16,14 @@
 			</p>
 			<p>
 
-			<form action="/projects/{{$project->id}}" method="POST">
-				@method('DELETE')
-				@csrf
-
-				<button type="submit" class="btn btn-danger">hmm</button>
-			</form>
 			</p>
+		</form>
+
+		<form action="/projects/{{$project->id}}" method="POST">
+			@method('DELETE')
+			@csrf
+
+			<button type="submit" class="btn btn-danger">hmm</button>
 		</form>
 	</div>
 </div>

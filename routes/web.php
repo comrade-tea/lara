@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('layout');
 });
 
-Route::get("projects/{project}", 'UsersController@show');
+//Route::get("projects/{project}", 'UsersController@show');
 //Route::get('users', 'UsersController@index');
 //Route::get('about', 'UsersController@about');
 //Route::post('users', 'UsersController@store');
